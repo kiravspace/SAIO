@@ -113,6 +113,9 @@ cp ./swift/test/sample.conf /etc/swift/test.conf
 # Add an environment variable for running tests below
 echo "export SWIFT_TEST_CONFIG_FILE=/etc/swift/test.conf" >> ./.bashrc
 
+# Be sure that your PATH includes the bin directory
+echo "export PATH=${PATH}:/root/bin" >> /root/.bashrc
+
 # Source the above environment variables into your current environment
 . ./.bashrc
 
