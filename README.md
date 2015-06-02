@@ -10,7 +10,8 @@ This is the script for SAIO installation. Reference from [OpenStack SAIO](http:/
 
 - Use root
 - Install git
-- Prepare second disk on /dev/sdb. We use /dev/sdb for generate swift partitions. (More detail on `partition.sh`)
+- Run bash `partition.sh`
+  + Prepare second disk on /dev/sdb. We use /dev/sdb for generate swift partitions. (More detail on `partition.sh`)
 
 ## Install
 

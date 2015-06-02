@@ -3,13 +3,8 @@
 echo "------------Install dependencies------------"
 
 apt-get update
-apt-get install curl gcc memcached rsync sqlite3 xfsprogs git-core libffi-dev python-setuptools
-apt-get install python-coverage python-dev python-nose python-simplejson python-xattr python-eventlet python-greenlet python-pastedeploy python-netifaces python-pip python-dnspython python-mock
-
-echo "------------Format Partition------------"
-sleep 3
-
-./partition.sh
+apt-get install curl gcc memcached rsync sqlite3 xfsprogs git-core libffi-dev python-setuptools -y
+apt-get install python-coverage python-dev python-nose python-simplejson python-xattr python-eventlet python-greenlet python-pastedeploy python-netifaces python-pip python-dnspython python-mock -y
 
 echo "------------Install Swift------------"
 sleep 3
@@ -90,7 +85,7 @@ rm -rf /etc/swift
 
 # Populate the /etc/swift directory itself
 cd ~
-cd ./swift/doc;
+cd ./swift/doc
 cp -r saio/swift /etc/swift
 cd ~
 
@@ -105,6 +100,9 @@ mkdir -p ./bin
 cp ./swift/doc/saio/bin/* ./bin
 cd ~
 chmod +x ./bin/*
+
+# Edit the $HOME/bin/resetswift script
+sed -i "s/\${USER}:\${USER}/root/" ./bin/resetswift
 
 # Install the sample configuration file for running tests
 cd ~
