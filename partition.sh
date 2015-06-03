@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "------------Install dependencies------------"
+
+apt-get update
+apt-get install curl gcc memcached rsync sqlite3 xfsprogs git-core libffi-dev python-setuptools -y
+apt-get install python-coverage python-dev python-nose python-simplejson python-xattr python-eventlet python-greenlet python-pastedeploy python-netifaces python-pip python-dnspython python-mock -y
+
 echo "------------Prepare Partition------------"
 
 # Set up a single partition
