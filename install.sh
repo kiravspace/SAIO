@@ -9,7 +9,7 @@ git clone https://github.com/openstack/python-swiftclient.git
 
 # Build a development installation of python-swiftclient
 cd ~/python-swiftclient
-python ./python-swiftclient/setup.py develop
+python setup.py develop
 
 # Check out the swift repo
 cd ~
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 python setup.py develop
 
 # Install swift’s test dependencies
-pip install -r ./swift/test-requirements.txt
+pip install -r test-requirements.txt
 
 echo "------------Setting up rsync------------"
 sleep 3
