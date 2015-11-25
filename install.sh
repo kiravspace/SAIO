@@ -5,7 +5,7 @@ sleep 3
 
 # Check out the python-swiftclient repo
 cd ~
-git clone https://github.com/openstack/python-swiftclient.git
+git clone https://github.com/openstack/python-swiftclient.git -b 2.6.0
 
 # Build a development installation of python-swiftclient
 cd ~/python-swiftclient
@@ -13,7 +13,7 @@ python setup.py develop
 
 # Check out the swift repo
 cd ~
-git clone https://github.com/openstack/swift.git
+git clone https://github.com/openstack/swift.git -b 2.5.0
 
 # Build a development installation of swift
 cd ~/swift
