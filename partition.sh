@@ -18,7 +18,7 @@ p
 w
 EOF
 
-mkfs.xfs /dev/sdb1
+mkfs.xfs /dev/sdb1 -f
 
 # Edit /etc/fstab and add
 echo "/dev/sdb1 /mnt/sdb1 xfs noatime,nodiratime,nobarrier,logbufs=8 0 0" >> /etc/fstab
